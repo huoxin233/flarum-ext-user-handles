@@ -1,7 +1,5 @@
 import app from 'flarum/admin/app';
 
-export { default as extend } from './extend';
-
 app.initializers.add('huoxin-user-handles', () => {
   app.extensionData
     .for('huoxin-user-handles')

@@ -1,9 +1,11 @@
 import app from 'flarum/forum/app';
 import { extend } from 'flarum/common/extend';
+import PostUser from 'flarum/forum/components/PostUser';
 import UserCard from 'flarum/forum/components/UserCard';
+import type ItemList from 'flarum/common/utils/ItemList';
 import type Mithril from 'mithril';
 import type User from 'flarum/common/models/User';
-import UserHandle from '../components/UserHandle';
+import UserHandle from './components/UserHandle';
 
 /**
  * Recursively search a virtual DOM node tree for an element with a specific CSS class.
@@ -29,7 +31,14 @@ function findVnodeByClass(vnode: unknown, targetClass: string): Mithril.Vnode<Mi
   return null;
 }
 
-export default function addUserCardHandle(): void {
+app.initializers.add('huoxin-user-handles', () => {
+  extend(PostUser.prototype, 'linkChildren', function (items: ItemList<Mithril.Children>, user: User) {
+    const showOnPost = app.forum.attribute<boolean>('userHandlesShowOnPost') ?? true;
+    if (!showOnPost) return;
+
+    items.add('user-handle', <UserHandle user={user} className="PostUser-handle" />, 75);
+  });
+
   extend(UserCard.prototype, 'view', function (this: UserCard, vnode: Mithril.Vnode<Mithril.Attributes>) {
     const showOnCard = app.forum.attribute<boolean>('userHandlesShowOnCard') ?? true;
     if (!showOnCard) return;
@@ -48,4 +57,4 @@ export default function addUserCardHandle(): void {
 
     identityNode.children.push(handleNode);
   });
-}
+});

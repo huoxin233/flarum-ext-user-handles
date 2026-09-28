@@ -3,7 +3,7 @@ import Component, { ComponentAttrs } from 'flarum/common/Component';
 import classList from 'flarum/common/utils/classList';
 import type Mithril from 'mithril';
 import type User from 'flarum/common/models/User';
-import { hasDistinctHandle, formatHandle } from '../../common/utils/handle';
+import { hasDistinctHandle, formatHandle } from '../utils/handle';
 
 export interface IUserHandleAttrs extends ComponentAttrs {
   user: User | null | undefined;

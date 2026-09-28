@@ -1,7 +1,11 @@
 huoxin-user-handles:
-  # For more details on the format
-  # Checkout https://docs.flarum.org/extend/i18n/#appendix-a-standard-key-format
   admin:
-    my_cool_key: My Cool Key
-
-  forum:
+    settings:
+      format_label: Handle Format Template
+      format_help: "Enter the format template using {username} as the placeholder. Default: @{username}. Examples: (@{username}) or [[{username}]]."
+      ignore_case_label: Ignore capitalization differences
+      ignore_case_help: "When enabled, names differing only by capitalization (such as 'Alice' and 'alice') will be treated as identical, hiding the handle."
+      show_on_post_label: Display on Posts
+      show_on_post_help: Show user handle beside nickname in post author headers.
+      show_on_card_label: Display on User Cards
+      show_on_card_help: Show user handle in user profile cards and profile hero banners.

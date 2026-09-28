@@ -1,5 +1,10 @@
 import app from 'flarum/forum/app';
+import addPostUserHandle from './extenders/addPostUserHandle';
+import addUserCardHandle from './extenders/addUserCardHandle';
 
-app.initializers.add('huoxin/user-handles', () => {
-  console.log('[huoxin/user-handles] Hello, forum!');
+export { default as extend } from './extend';
+
+app.initializers.add('huoxin-user-handles', () => {
+  addPostUserHandle();
+  addUserCardHandle();
 });

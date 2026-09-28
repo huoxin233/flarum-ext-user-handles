@@ -1,0 +1,49 @@
+// User Handles Styling
+
+.UserHandle {
+  display: inline-block;
+  vertical-align: baseline;
+  white-space: nowrap;
+  user-select: text;
+  transition: opacity 0.15s ease, color 0.15s ease;
+}
+
+// Post Author Header (.PostUser)
+.PostUser-name {
+  .PostUser-handle {
+    font-size: 0.85em;
+    font-weight: normal;
+    color: var(--muted-color);
+    margin-left: 5px;
+    opacity: 0.85;
+
+    @media @phone {
+      font-size: 0.8em;
+      margin-left: 4px;
+    }
+  }
+
+  a:hover .PostUser-handle {
+    opacity: 1;
+    color: var(--text-color);
+  }
+}
+
+// User Profile Card & Hero (.UserCard)
+.UserCard-identity {
+  .UserCard-handle {
+    font-size: 0.7em;
+    font-weight: normal;
+    color: inherit;
+    opacity: 0.8;
+    margin-left: 8px;
+    vertical-align: middle;
+
+    @media @phone {
+      display: block;
+      margin-left: 0;
+      margin-top: 4px;
+      font-size: 0.65em;
+    }
+  }
+}

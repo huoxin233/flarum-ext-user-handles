@@ -1,0 +1,11 @@
+huoxin-user-handles:
+  admin:
+    settings:
+      format_label: 用户名句柄显示格式模板
+      format_help: "使用 {username} 作为占位符自定义显示格式。默认：@{username}。示例：(@{username}) 或 [[{username}]]。"
+      ignore_case_label: 忽略大小写差异
+      ignore_case_help: "开启后，若昵称与用户名仅大小写不同（如 Alice 与 alice），将视为同一名称，不再重复显示句柄。"
+      show_on_post_label: 在帖子作者栏显示
+      show_on_post_help: 在帖子顶部的作者昵称旁显示 @用户名 句柄。
+      show_on_card_label: 在用户资料卡显示
+      show_on_card_help: 在悬浮资料卡和个人主页横幅中显示 @用户名 句柄。

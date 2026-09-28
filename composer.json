@@ -2,8 +2,19 @@
     "name": "huoxin/user-handles",
     "description": "Display @username handles alongside nicknames across the forum.",
     "keywords": [
-        "flarum"
+        "flarum",
+        "extension",
+        "name",
+        "nickname",
+        "handles",
+        "username",
+        "identity"
     ],
+    "support": {
+        "issues": "https://github.com/huoxin233/flarum-ext-user-handles/issues",
+        "source": "https://github.com/huoxin233/flarum-ext-user-handles",
+        "forum": "https://discuss.flarum.org/d/PUT_DISCUSS_SLUG_HERE"
+    },
     "type": "flarum-extension",
     "license": "MIT",
     "require": {
@@ -16,6 +27,16 @@
             "role": "Developer"
         }
     ],
+    "funding": [
+        {
+            "type": "buymeacoffee",
+            "url": "https://www.buymeacoffee.com/huoxin"
+        },
+        {
+            "type": "ko-fi",
+            "url": "https://ko-fi.com/huoxin"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "Huoxin\\UserHandles\\": "src/"
@@ -24,12 +45,15 @@
     "extra": {
         "flarum-extension": {
             "title": "User Handles",
-            "category": "",
+            "category": "feature",
             "icon": {
-                "name": "",
-                "color": "",
-                "backgroundColor": ""
-            }
+                "name": "fas fa-at",
+                "color": "#fff",
+                "backgroundColor": "#9A2424"
+            },
+            "optional-dependencies": [
+                "flarum/nicknames"
+            ]
         },
         "flarum-cli": {
             "modules": {

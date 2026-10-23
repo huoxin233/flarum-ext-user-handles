@@ -2,9 +2,9 @@ huoxin-user-handles:
   admin:
     settings:
       format_label: Handle Format Template
-      format_help: "Enter the format template using {username} as the placeholder. Default: @{username}. Examples: (@{username}) or [[{username}]]."
+      format_help: "Enter the format template using '{username}' as the placeholder. Default: '@{username}'. Examples: '(@{username})' or '[[{username}]]'."
       ignore_case_label: Ignore capitalization differences
-      ignore_case_help: "When enabled, names differing only by capitalization (such as 'Alice' and 'alice') will be treated as identical, hiding the handle."
+      ignore_case_help: "When enabled, names differing only by capitalization (such as ''Alice'' and ''alice'') will be treated as identical, hiding the handle."
       show_on_post_label: Display on Posts
       show_on_post_help: Show user handle beside nickname in post author headers.
       show_on_card_label: Display on User Cards

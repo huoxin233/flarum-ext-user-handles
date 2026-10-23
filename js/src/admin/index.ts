@@ -1,7 +1,7 @@
 import app from 'flarum/admin/app';
 
 app.initializers.add('huoxin-user-handles', () => {
-  app.extensionData
+  app.registry
     .for('huoxin-user-handles')
     .registerSetting({
       setting: 'huoxin-user-handles.format',

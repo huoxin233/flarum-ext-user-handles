@@ -13,6 +13,7 @@ namespace Huoxin\UserHandles\Tests\integration;
 
 use Flarum\Testing\integration\TestCase;
 use Illuminate\Support\Arr;
+use PHPUnit\Framework\Attributes\Test;
 
 class ForumAttributesTest extends TestCase
 {
@@ -26,9 +27,7 @@ class ForumAttributesTest extends TestCase
         $this->extension('huoxin-user-handles');
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function forum_endpoint_returns_default_handles_settings()
     {
         $response = $this->send(
@@ -46,9 +45,7 @@ class ForumAttributesTest extends TestCase
         $this->assertTrue(Arr::get($attributes, 'userHandlesShowOnCard'));
     }
 
-    /**
-     * @test
-     */
+    #[Test]
     public function custom_settings_are_serialized_properly()
     {
         $this->setting('huoxin-user-handles.format', '(@{username})');

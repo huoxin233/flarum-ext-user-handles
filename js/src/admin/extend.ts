@@ -1,7 +1,7 @@
 import Extend from 'flarum/common/extenders';
 import app from 'flarum/admin/app';
 
-export default [
+const extenders = [
   new Extend.Admin()
     .setting(() => ({
       setting: 'huoxin-user-handles.format',
@@ -33,3 +33,5 @@ export default [
       default: true,
     })),
 ];
+
+export default extenders;
